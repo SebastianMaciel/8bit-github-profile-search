@@ -1,8 +1,39 @@
-$('#buscarUsuario').on('click', () => {
+// // Si apretamos enter, también funciona
+// $("#buscarUsuario").keypress(function(e){
+//   // Tomamos el valor de búsqueda:
+//   let usuarioGitHub = $('#inputUsuario').val()
+//   if( e.which === 13 ) {
+//     // Ejecutamos la función de búsqueda
+//     console.log("ok");
+//     buscarData(usuarioGitHub)
+//   }
+// });
 
+// $('#buscarUsuario').on('keypress', function (e) {
+//   if(e.which === 13){
+
+//      console.log("ok");
+//   }
+// });
+
+$(document).ready(function(){
+document.getElementById('buscarUsuario')
+  .addEventListener('keyup', function(event) {
+    if (event.code === 'Enter') {
+      event.preventDefault();
+      console.log("ok");
+    }
+  });
+});
+// Si hacemos clic en el botón "Buscar!"
+$('#buscarUsuario').on('click', () => {
   // Tomamos el valor de búsqueda:
   let usuarioGitHub = $('#inputUsuario').val()
+  // Ejecutamos la función de búsqueda
+  buscarData(usuarioGitHub)
+})
 
+let buscarData = (usuarioGitHub) => {
   $.ajax({
     url: `https://api.github.com/users/${usuarioGitHub}`,
     context: document.body,
@@ -34,8 +65,7 @@ $('#buscarUsuario').on('click', () => {
       }
   }
   })
-})
-
+}
 
 let popularHTML = (data) => {
   $('#nombre').text(data.name)
