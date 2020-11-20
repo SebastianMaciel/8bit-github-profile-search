@@ -1,9 +1,10 @@
-// Tomamos el valor de búsqueda:
-let usuarioGitHub = $('#gitHubUser').val()
-
 $('#buscarUsuario').on('click', () => {
+
+  // Tomamos el valor de búsqueda:
+  let usuarioGitHub = $('#inputUsuario').val()
+
   $.ajax({
-    url: "https://api.github.com/users/" + usuarioGitHub,
+    url: `https://api.github.com/users/${usuarioGitHub}`,
     context: document.body,
     success: function (data) {
       popularHTML(data)
@@ -15,7 +16,8 @@ $('#buscarUsuario').on('click', () => {
           followers: "X",
           public_gists: "X",
           public_repos: "X",
-          name: "Usuario no encontrado..."
+          name: "Usuario no encontrado...",
+          bio: ""
         }
           popularHTML(noData)
       }
@@ -25,7 +27,8 @@ $('#buscarUsuario').on('click', () => {
           followers: "X",
           public_gists: "X",
           public_repos: "X",
-          name: "Se llegó al límite de consultas gratis :("
+          name: "Se llegó al límite de consultas gratis :(",
+          bio: ""
         }
           popularHTML(noData)
       }
