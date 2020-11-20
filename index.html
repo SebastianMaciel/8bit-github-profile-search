@@ -24,12 +24,15 @@
       <div class="box">
 
         <div class="input-group mb-4 mt-4">
-          <div class="input-group-prepend">
+          <div class="input-group-prepend d-none d-md-block">
             <span class="input-group-text">github/</span>
           </div>
           <input type="text" class="form-control" placeholder="usuarioGitHub" id="inputUsuario">
-          <div class="input-group-append">
-            <button class="btn btn-secondary" id="buscarUsuario">Buscar!</button>
+          <div class="input-group-append d-none d-sm-block">
+            <button class="btn btn-secondary buscarUsuario">Buscar!</button>
+          </div>
+          <div class="input-group-append d-block d-sm-none">
+            <button class="btn btn-secondary buscarUsuario"><i class="fas fa-search"></i></button>
           </div>
         </div>
 

@@ -1,5 +1,5 @@
 // Si hacemos clic en el botón "Buscar!"
-$('#buscarUsuario').on('click', () => {
+$('.buscarUsuario').on('click', () => {
   // Tomamos el valor de búsqueda:
   let usuarioGitHub = $('#inputUsuario').val()
   // Ejecutamos la función de búsqueda
