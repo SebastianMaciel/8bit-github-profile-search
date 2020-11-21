@@ -16,7 +16,7 @@ let buscarData = (usuarioGitHub) => {
     success: function (data) {
       popularHTML(data)
     },
-    // Si para algo malo, igual llenamos el HTML...
+    // Si pasa algo malo, igual llenamos el HTML...
     error:function (xhr, ajaxOptions, thrownError){
       // Este error, es cuando no se encuentra el usuario
       if(xhr.status==404) {
