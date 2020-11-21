@@ -11,7 +11,7 @@ Desafío: Crear una Card que muestre información sobre un perfil en GitHub.
 
 Un poco de HTML, CSS un poco más y diría que bastante JS.
 
-Usamos jQuery por costumbre nomás. Y el método Ajan de jQuery para buscar info de Gihub
+Usamos jQuery por costumbre nomás. Y el método Ajax de jQuery para buscar info de Gihub
 
 Buscamos usuario y traemos algunos datos simples, con control de errores.
 
