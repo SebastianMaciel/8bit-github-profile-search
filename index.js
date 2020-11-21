@@ -11,9 +11,9 @@ let buscarDataParaEl = (usuarioDeGitHub) => {
 
   // Hacemos un Ajax...
   $.ajax({
-    url: `https://api.github.com/users/${usuarioDeGitHub}`,
+    url: `https://api.github.com/users/${usuarioDeGitHub}`, // Acá está metido el nombre del usuario a buscar, con template string ${usuarioDeGitHub}
     context: document.body,
-    
+
     // Si sale todo bien, le mandamos la info del usuario a la función que llena el HMTL
     success: function (dataDelUsuario) {
       popularHTMLConLa(dataDelUsuario)
