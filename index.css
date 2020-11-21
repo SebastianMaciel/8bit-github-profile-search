@@ -1,7 +1,9 @@
+/* Sacamos todas las decoraciones para links */
 a:hover {
   text-decoration: none;
 }
 
+/* El box es la caja esa linda medio retro donde va toda la data */
 .box {
   display: flex;
   flex-direction: column;
@@ -18,6 +20,7 @@ a:hover {
   text-align: center;
 }
 
+/* La foto del usuario, cuando corresponde */
 .fotoPerfil img {
   max-width: 200px;
   border-radius: 70px;
@@ -25,10 +28,12 @@ a:hover {
   border: 6px solid rgb(102, 102, 102);
 }
 
+/* La bio de cada uno a veces es larga, por eso limitamos para que no haya overflow */
 .bio {
   max-width: 60%;
 }
 
+/* La data de cada personilla */
 .data {
   display: flex;
   width: 100%;
@@ -44,11 +49,12 @@ a:hover {
 
 /* Media queries - Cuando llega a este punto, corregimos visual */
 @media screen and (max-width: 665px) {
-  /* Bajamos un toque el espaciado */
+  /* En celus, la data va en vertical */
   .data {
     flex-direction: column;
     margin-bottom: 20px;
   }
+  /* Espaciamos un toque más la data interna */
   .repos, .gists {
     margin-bottom: 30px;
   }
